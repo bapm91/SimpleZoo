@@ -35,9 +35,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private void setListeners() {
         mSpinner.setOnItemSelectedListener(this);
 
-        mArrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1
-                , getResources().getStringArray(R.array.list_insects));
-        mListView.setAdapter(mArrayAdapter);
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -52,31 +49,27 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         switch (i) {
             case 0 :
-                mArrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1
-                        , getResources().getStringArray(R.array.list_insects));
-                mListView.setAdapter(mArrayAdapter);
-
+                setListView(R.array.list_insects);
                 break;
 
             case 1 :
-                mArrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1
-                        , getResources().getStringArray(R.array.list_arthropods));
-                mListView.setAdapter(mArrayAdapter);
+                setListView(R.array.list_arthropods);
                 break;
 
             case 2 :
-                mArrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1
-                        , getResources().getStringArray(R.array.list_birds));
-                mListView.setAdapter(mArrayAdapter);
+                setListView(R.array.list_birds);
                 break;
 
             case 3 :
-                mArrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1
-                        , getResources().getStringArray(R.array.list_animals));
-                mListView.setAdapter(mArrayAdapter);
+                setListView(R.array.list_animals);
                 break;
-
         }
+    }
+
+    private void setListView(int resource){
+        mArrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1
+                , getResources().getStringArray(resource));
+        mListView.setAdapter(mArrayAdapter);
     }
 
     @Override
