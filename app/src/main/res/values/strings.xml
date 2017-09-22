@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">SimpleZoo</string>
+
+    <array name="spinner_list">
+        <item>Insects</item>
+        <item>Arthropods</item>
+        <item>Birds</item>
+        <item>Animals</item>
+    </array>
+
+    <array name="list_insects">
+        <item>Mosquito</item>
+        <item>Fly</item>
+        <item>Mole</item>
+    </array>
+
+    <array name="list_arthropods">
+        <item>Spider</item>
+        <item>Scorpion</item>
+        <item>Lobster</item>
+    </array>
+
+    <array name="list_birds">
+        <item>Eagle</item>
+        <item>Owl</item>
+        <item>Parrot</item>
+    </array>
+
+    <array name="list_animals">
+        <item>Puma</item>
+        <item>Stalls</item>
+        <item>Antelope</item>
+    </array>
+
 </resources>
